@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simply Irrigation LLC - Home</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2C4027",
+                        "background-light": "#F4F1EB",
+                        "background-dark": "#142111",
+                        "surface": "#E9E4DA",
+                        "text-main": "#32302E",
+                        "muted": "#8C867B",
+                        "accent": "#1E3A40"
+                    },
+                    fontFamily: {
+                        "heading": ["Playfair Display", "serif"],
+                        "body": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    letterSpacing: {
+                        "eyebrow": "0.1em",
+                        "button": "0.05em"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .hero-parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .image-hover-scale {
+            transition: transform 0.8s ease-out;
+        }
+        .image-container:hover .image-hover-scale {
+            transform: scale(1.05);
+        }
+
+        /* Hide scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4F1EB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8C867B;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2C4027;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-body antialiased min-h-screen flex flex-col selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- TopNavBar Shared Component -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-muted/30 px-6 py-4 bg-background-light/90 backdrop-blur-md transition-all duration-300">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+</div>
+<h2 class="font-heading text-xl font-semibold tracking-wide uppercase">Simply Irrigation</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-10">
+<nav class="flex items-center gap-8">
+<a class="text-text-main hover:text-primary font-body text-sm font-medium tracking-eyebrow uppercase transition-colors" href="#">Home</a>
+<a class="text-text-main hover:text-primary font-body text-sm font-medium tracking-eyebrow uppercase transition-colors" href="#">Solutions</a>
+<a class="text-text-main hover:text-primary font-body text-sm font-medium tracking-eyebrow uppercase transition-colors" href="#">Sustainability</a>
+<a class="text-text-main hover:text-primary font-body text-sm font-medium tracking-eyebrow uppercase transition-colors" href="#">Consultation</a>
+</nav>
+<a class="group relative flex h-12 items-center justify-center overflow-hidden bg-primary px-8 text-background-light text-sm font-medium uppercase tracking-button transition-colors hover:bg-accent" href="#">
+<span class="relative z-10">Request Site Audit</span>
+</a>
+</div>
+<!-- Mobile menu button -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<main class="flex-grow">
+<!-- Hero Section (100vh) -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden hero-parallax" data-alt="Drone shot of lush geometric agricultural fields" style="background-image: linear-gradient(rgba(44, 64, 39, 0.4), rgba(44, 64, 39, 0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1rdPEy-I7QO9PUenD9kRMgmeEYGng6PSCuMPx7uI0I_2ER4MpYWApC5_ob87WCwjTd7s7ekJhpQnobfdLz0gSt5Y6HNY1z4wY_zgYkcGEsrvJy3QojVbxXwABOaKn4BKZwHqwNGvZ0uxY3FrfVAHMH2c7uMemgOywPuF74IgDKfdOokhwYyuOzq4EQYc1g00uPeca2Dr-vAIuV0rXRydyA1IkWsmD8aQsy51QojNbO0M1j_yIyqit2gXuR5-Fe9cN8K2vAglydJVD');">
+<div class="relative z-10 flex flex-col items-center justify-center text-center px-6 mt-16 max-w-5xl mx-auto">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-px w-10 bg-surface"></div>
+<span class="text-surface font-body text-xs uppercase tracking-[0.2em] font-medium">Cultivating Tomorrow</span>
+<div class="h-px w-10 bg-surface"></div>
+</div>
+<h1 class="font-heading text-5xl md:text-7xl lg:text-[96px] text-background-light font-normal leading-[1.1] mb-12 opacity-0 translate-y-8 animate-[fade-in-up_1s_ease-out_0.5s_forwards]" style="animation: fadeInUp 1.5s ease-out 0.2s forwards;">
+                    Nurturing the Roots of Tomorrow
+                </h1>
+<a class="group relative flex h-14 w-[200px] items-center justify-center overflow-hidden bg-background-light text-primary text-sm font-medium uppercase tracking-button transition-all duration-300 hover:bg-primary hover:text-background-light opacity-0" href="#philosophy" style="animation: fadeIn 1s ease-out 1s forwards;">
+<span class="relative z-10">Explore Solutions</span>
+<div class="absolute inset-0 border border-transparent group-hover:border-background-light transition-colors"></div>
+</a>
+</div>
+<!-- Scroll indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-0" style="animation: fadeIn 1s ease-out 1.5s forwards;">
+<span class="text-surface/70 font-body text-xs uppercase tracking-widest">Scroll</span>
+<div class="w-px h-16 bg-gradient-to-b from-surface/70 to-transparent"></div>
+</div>
+</section>
+<!-- Philosophy Block (Asymmetrical 2-column) -->
+<section class="relative w-full bg-background-light py-32 px-6 md:px-12 lg:px-24" id="philosophy">
+<div class="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-32">
+<!-- Sticky Left -->
+<div class="lg:w-5/12 relative">
+<div class="sticky top-40 flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<span class="text-muted font-body text-xs uppercase tracking-eyebrow font-medium">The Vision</span>
+<div class="h-px w-10 bg-muted"></div>
+</div>
+<h2 class="font-heading text-4xl md:text-5xl lg:text-[48px] text-primary font-normal leading-tight">
+                            Sustainable Mission
+                        </h2>
+</div>
+</div>
+<!-- Scrolling Right -->
+<div class="lg:w-7/12 flex flex-col gap-12 font-body text-lg md:text-xl text-text-main leading-relaxed">
+<p class="first-letter:text-5xl first-letter:font-heading first-letter:mr-1 first-letter:float-left first-line:uppercase first-line:tracking-widest">
+                        We believe in sustainable water stewardship and positioning water management as environmental stewardship. Blending high-efficiency technical authority with the emotional resonance of nurturing land and legacy.
+                    </p>
+<p>
+                        In an era defined by resource scarcity, our approach to irrigation transcends mere utility. We engineer comprehensive ecosystems that harmonize with the natural water cycle, ensuring every drop is optimized for both immediate agricultural yield and long-term soil vitality.
+                    </p>
+<div class="border-l border-muted pl-8 py-2 my-6">
+<p class="font-heading text-2xl italic text-primary">
+                            "True efficiency is not just about using less, but nurturing more. We build systems that speak the language of the land."
+                        </p>
+</div>
+<p>
+                        From sprawling estates to commercial agriculture, our structural precision and rigorous data analysis provide the foundation for landscapes that thrive generation after generation.
+                    </p>
+<div class="pt-8 mt-8 border-t border-muted/30">
+<a class="inline-flex items-center gap-3 text-primary font-medium tracking-button uppercase text-sm hover:text-accent transition-colors group" href="#">
+                            Read the Full Manifesto
+                            <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-2" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Teaser Grid (3-column masonry) -->
+<section class="w-full bg-surface py-32 px-6 md:px-12 lg:px-24 border-t border-muted/30">
+<div class="max-w-[1400px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<span class="text-muted font-body text-xs uppercase tracking-eyebrow font-medium">Our Systems</span>
+<div class="h-px w-10 bg-muted"></div>
+</div>
+<h2 class="font-heading text-4xl text-primary font-normal">Technical Integration</h2>
+</div>
+<a class="group relative flex h-12 w-auto px-8 items-center justify-center overflow-hidden border border-primary text-primary text-sm font-medium uppercase tracking-button transition-colors hover:bg-primary hover:text-background-light" href="#">
+<span class="relative z-10">View All Solutions</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-muted/30">
+<!-- Grid Item 1 -->
+<a class="group flex flex-col border-b md:border-b-0 md:border-r border-muted/30 pb-10 md:pb-0 hover:bg-background-light transition-colors duration-500" href="#">
+<div class="h-[400px] w-full overflow-hidden image-container relative">
+<div class="absolute inset-0 bg-cover bg-center image-hover-scale" data-alt="Macro detail of brass irrigation nozzle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAx-EiHBYjtqfnhKFxNT74eNtH-GhUUKMvPpzvYc7kJ3p3qg1aB3DKOHwqoCUWpH9JZhnsPVUa2CTgPGhuRX1UEbycbDy80vY3r5kY_Qx5n4r0y2Bof3tzNvhzVUNDx_BZC7vNPpZ6Ws9EWgtPmf4D1UvUZ-sGVNIURDnNNyk_Dku2G48MtdGn30UrhToTHMS_KtGOcN3SHId_MN2tNin4eKmX0Yq9dTjclF-kJGuJD9mwHr2zwNsZLO8JPv4qqCTQu4sGmWq3HbP4E');"></div>
+</div>
+<div class="p-8 flex flex-col gap-4">
+<span class="text-muted font-body text-xs uppercase tracking-eyebrow font-medium">01</span>
+<h3 class="font-heading text-2xl text-primary group-hover:text-accent transition-colors">Precision Drip Systems</h3>
+<p class="font-body text-sm text-text-main/80 leading-relaxed">Micro-targeted delivery maximizing root absorption and minimizing surface evaporation for high-value crops.</p>
+</div>
+</a>
+<!-- Grid Item 2 -->
+<a class="group flex flex-col border-b lg:border-b-0 lg:border-r border-muted/30 pb-10 lg:pb-0 hover:bg-background-light transition-colors duration-500" href="#">
+<div class="h-[400px] w-full overflow-hidden image-container relative">
+<div class="absolute inset-0 bg-cover bg-center image-hover-scale" data-alt="Smart irrigation controller interface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMF6FluN9arKCd0fBOk_-11stajfSz8hSTzS4RmGCUn6l3eBI5z_V9wyi_KNrc-jmSpt5_CqdCaocTH4--I1DEwvWeW8iE1WAk23zptcZRlPlLa89iDB--xURRH05IYf-q36hl2o27xW0cy5A59YGpTnANeuAIuGZlp0KrQDKwj59_PdB2LlSBgLIn4W_bbhNBH_WLAhYilei71LOIsjWuRopx24VfnV1r-FWe2qnkufhZErdwYhEKMwhCiJ4BHABV9f-JFvf0_jKF');"></div>
+</div>
+<div class="p-8 flex flex-col gap-4">
+<span class="text-muted font-body text-xs uppercase tracking-eyebrow font-medium">02</span>
+<h3 class="font-heading text-2xl text-primary group-hover:text-accent transition-colors">Smart Controllers</h3>
+<p class="font-body text-sm text-text-main/80 leading-relaxed">Weather-responsive telemetry and predictive modeling for autonomous, optimized scheduling.</p>
+</div>
+</a>
+<!-- Grid Item 3 -->
+<a class="group flex flex-col hover:bg-background-light transition-colors duration-500" href="#">
+<div class="h-[400px] w-full overflow-hidden image-container relative">
+<div class="absolute inset-0 bg-cover bg-center image-hover-scale" data-alt="Commercial flow management valve assembly" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnrtbf3xMzUFqIQio1M8jMfCgIvELZ42_LQqBZRpe_fUbswh6IDBhZj0Tej8-3bRJaxZ8MMerDotaDZFLz0Vi15Cw8xWjEz3IQvUYVd2QpfuJ0Xl3HwxPUZqc9vQUq8gscVpj8RCqWcsUMj4ixWwJBEEtpFdKcgXmfwjLtxLcYZlPS3gJN1Roc-knL1mfToCgWqQOHJPretceqK9H_XDRRVESv21-JxZGLb-DEoYhHNMbwQ6x1tpvOJWZjDNX9VtS6gIQYS-9Rfwft');"></div>
+</div>
+<div class="p-8 flex flex-col gap-4">
+<span class="text-muted font-body text-xs uppercase tracking-eyebrow font-medium">03</span>
+<h3 class="font-heading text-2xl text-primary group-hover:text-accent transition-colors">Flow Management</h3>
+<p class="font-body text-sm text-text-main/80 leading-relaxed">High-capacity hydraulic structures designed for municipal and large-scale commercial resilience.</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component adapted for editorial theme -->
+<footer class="w-full bg-background-dark text-surface pt-24 pb-12 px-6 md:px-12 lg:px-24 border-t border-muted/20">
+<div class="max-w-[1400px] mx-auto flex flex-col gap-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="lg:col-span-2 flex flex-col gap-8">
+<h2 class="font-heading text-3xl font-normal text-surface">Simply Irrigation</h2>
+<p class="font-body text-sm text-surface/70 max-w-md leading-relaxed">
+                        Engineering sustainable water ecosystems for commercial agriculture and grand estates. Nurturing the roots of tomorrow through structural precision.
+                    </p>
+</div>
+<div class="flex flex-col gap-6">
+<span class="font-body text-xs uppercase tracking-eyebrow font-medium text-surface/50">Navigation</span>
+<nav class="flex flex-col gap-4">
+<a class="font-body text-sm hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body text-sm hover:text-primary transition-colors" href="#">Solutions</a>
+<a class="font-body text-sm hover:text-primary transition-colors" href="#">Sustainability</a>
+<a class="font-body text-sm hover:text-primary transition-colors" href="#">Consultation</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<span class="font-body text-xs uppercase tracking-eyebrow font-medium text-surface/50">Contact</span>
+<address class="not-italic font-body text-sm text-surface/70 flex flex-col gap-2">
+<p>1240 Waterway Blvd</p>
+<p>Suite 300</p>
+<p>Portland, OR 97209</p>
+<a class="mt-4 hover:text-primary transition-colors" href="mailto:stewardship@simplyirrigation.com">stewardship@simplyirrigation.com</a>
+</address>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-surface/10 gap-6">
+<p class="font-body text-xs text-surface/50">© Simply Irrigation LLC. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="font-body text-xs text-surface/50 hover:text-surface transition-colors" href="#">Privacy Policy</a>
+<a class="font-body text-xs text-surface/50 hover:text-surface transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</body></html>

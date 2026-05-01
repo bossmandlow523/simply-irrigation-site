@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simply Irrigation - Solutions</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2C4027",
+                        "background-light": "#F4F1EB",
+                        "background-dark": "#142111", // Added for dark mode support as per rules, though PRD says earthy
+                        "surface": "#E9E4DA",
+                        "text": "#32302E",
+                        "muted": "#8C867B",
+                        "accent": "#1E3A40",
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Work Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        html { scroll-behavior: smooth; }
+        /* Custom scrollbar to match aesthetic */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F4F1EB; }
+        ::-webkit-scrollbar-thumb { background: #8C867B; }
+        ::-webkit-scrollbar-thumb:hover { background: #2C4027; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text font-body antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/95 backdrop-blur-sm border-b border-muted">
+<div class="px-8 py-6 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="water_drop">water_drop</span>
+<span class="font-display font-semibold text-xl tracking-wide text-primary uppercase">Simply Irrigation</span>
+</div>
+<nav class="hidden md:flex items-center gap-12">
+<a class="text-sm font-medium tracking-[1px] uppercase text-text hover:text-primary transition-colors" href="#drip">Drip Systems</a>
+<a class="text-sm font-medium tracking-[1px] uppercase text-text hover:text-primary transition-colors" href="#smart">Smart Controllers</a>
+<a class="text-sm font-medium tracking-[1px] uppercase text-text hover:text-primary transition-colors" href="#flow">Flow Management</a>
+</nav>
+<a class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 text-sm font-medium uppercase tracking-[0.5px] transition-colors duration-300" href="#">
+                Request Audit
+            </a>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Title -->
+<section class="pt-32 pb-24 px-8 md:px-16 lg:px-24 border-b border-muted">
+<div class="max-w-5xl">
+<p class="text-muted text-xs uppercase tracking-[2px] font-medium mb-6 flex items-center gap-4">
+<span class="w-10 h-px bg-muted"></span>
+                    The Systems
+                </p>
+<h1 class="font-display text-5xl md:text-7xl lg:text-[96px] leading-tight text-primary mb-8">Technical Expertise.</h1>
+<p class="text-lg md:text-xl text-text max-w-2xl leading-relaxed font-body">
+                    Precision engineering meets environmental stewardship. Our commercial irrigation solutions are designed for maximum yield with minimum footprint.
+                </p>
+</div>
+</section>
+<!-- Drip Systems -->
+<section class="border-b border-muted scroll-mt-24 group" id="drip">
+<div class="flex flex-col md:flex-row">
+<!-- Left Column (30%) -->
+<div class="md:w-[30%] border-r border-muted p-8 md:p-16 bg-background-light transition-colors group-hover:bg-surface/50">
+<div class="sticky top-40">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="grass">grass</span>
+<h2 class="font-display text-3xl md:text-4xl text-primary mb-4">Precision Drip</h2>
+<p class="text-muted text-sm leading-relaxed mb-8">
+                            Delivering water and nutrients directly to the plant's root zone, exactly when and where it's needed.
+                        </p>
+<a class="inline-flex items-center gap-2 text-sm font-medium tracking-[0.5px] uppercase text-primary border-b border-primary pb-1 hover:text-accent hover:border-accent transition-colors" href="#">
+                            Download Spec Sheet <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+</a>
+</div>
+</div>
+<!-- Right Column (70%) -->
+<div class="md:w-[70%] p-8 md:p-16 group-hover:bg-surface/30 transition-colors">
+<div class="w-full aspect-video bg-surface mb-12 relative overflow-hidden">
+<img alt="Macro shot of agricultural drip irrigation line" class="w-full h-full object-cover filter sepia-[0.2] contrast-[1.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUD7c_xYOeVPAE5Q6q4k3PiK29HuRLbFHj4ZRStuHWLRB_HY7__3IYGkSL5SlHtJXaHtxnTbJodWwpDg2zu_iGYG_Ma3Kk7vlbc6MT12srIuqL0DxcQ5ai4PnmoNWfOTTf9yXbdoD9YnB2Geh00RII8JKQqFrk28Uc1augE50ewG31Wx5czQ2sZKBiyCt-e94rsA14k6g8hf_krDY8d7szbGNIDyy4PPGTp5JXZCrzS0hr6faV7Y3iCfWqTeRjZ8ksyr7OKvGJLbpE"/>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-muted">
+<th class="py-4 px-4 font-display font-semibold text-lg text-primary">Specification</th>
+<th class="py-4 px-4 font-display font-semibold text-lg text-primary">Commercial Grade Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-muted hover:bg-surface transition-colors">
+<td class="py-4 px-4 text-sm font-medium text-text">Emitter Spacing</td>
+<td class="py-4 px-4 text-sm text-muted">12", 18", 24" Custom Configurations</td>
+</tr>
+<tr class="border-b border-muted hover:bg-surface transition-colors">
+<td class="py-4 px-4 text-sm font-medium text-text">Flow Rates</td>
+<td class="py-4 px-4 text-sm text-muted">0.4, 0.6, 0.9 GPH Pressure Compensating</td>
+</tr>
+<tr class="border-b border-muted hover:bg-surface transition-colors">
+<td class="py-4 px-4 text-sm font-medium text-text">Material</td>
+<td class="py-4 px-4 text-sm text-muted">UV-Resistant Dual-Layer Polyethylene</td>
+</tr>
+<tr class="border-b border-muted hover:bg-surface transition-colors">
+<td class="py-4 px-4 text-sm font-medium text-text">Filtration Req.</td>
+<td class="py-4 px-4 text-sm text-muted">120 Mesh / 130 Micron</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Study Interstitial -->
+<section class="h-[614px] relative flex items-center justify-center border-b border-muted overflow-hidden">
+<img alt="Vast green agricultural field at dawn" class="absolute inset-0 w-full h-full object-cover opacity-80 filter sepia-[0.3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYGyw3Nv84MzpaXoKCkwsiP3gJbWyRxD2IGW3wHd9h0GGXP4Jj-V2lOct5M9J4BQoAQvv3DJU2tvQh399gA-h3M0YJ6fQDjXOfOyGitIoPVzpR5O0jzQhiMH_vFjjA9MJGpUMDoT7jZFkBLiNciHiUfRdC5AG58ZaxOeVLvd3kDAhRnDT3yRI87sD1ICYZm-8rQof8sFMf_scibIGUpsHLnRB4zqzslEiWcaoMI823wXkBBOXjMLE_K2o5G65CHPLHfoVI4GchsMRn"/>
+<div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+<div class="relative z-10 text-center max-w-3xl px-8 bg-background-light/90 p-12 border border-muted backdrop-blur-sm">
+<p class="text-muted text-xs uppercase tracking-[2px] font-medium mb-4">Case Study</p>
+<h3 class="font-display text-4xl text-primary mb-4">Highland Botanical Gardens</h3>
+<p class="text-text font-body text-sm mb-6">A 40% reduction in water usage achieved through integration of weather-responsive smart controllers and subterranean drip lines across 50 acres.</p>
+<a class="text-sm font-medium tracking-[1px] uppercase text-primary hover:text-accent transition-colors underline underline-offset-4 decoration-1" href="#">Read the Full Report</a>
+</div>
+</section>
+<!-- Smart Controllers -->
+<section class="border-b border-muted scroll-mt-24 group" id="smart">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-[30%] border-r border-muted p-8 md:p-16 bg-background-light transition-colors group-hover:bg-surface/50">
+<div class="sticky top-40">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="memory">memory</span>
+<h2 class="font-display text-3xl md:text-4xl text-primary mb-4">Smart Logic</h2>
+<p class="text-muted text-sm leading-relaxed mb-8">
+                            Cloud-connected management hubs that analyze hyper-local weather data to adjust watering schedules in real-time.
+                        </p>
+<a class="inline-flex items-center gap-2 text-sm font-medium tracking-[0.5px] uppercase text-primary border-b border-primary pb-1 hover:text-accent hover:border-accent transition-colors" href="#">
+                            Download Spec Sheet <span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+</a>
+</div>
+</div>
+<div class="md:w-[70%] p-8 md:p-16 group-hover:bg-surface/30 transition-colors">
+<div class="w-full aspect-[21/9] bg-surface mb-12 relative overflow-hidden flex items-center justify-center border border-muted">
+<span class="material-symbols-outlined text-muted text-6xl opacity-20" data-icon="dashboard">dashboard</span>
+<!-- Placeholder for dashboard UI graphic -->
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-muted border border-muted">
+<div class="bg-background-light p-8 hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="cloud_sync">cloud_sync</span>
+<h4 class="font-display text-xl text-primary mb-2">Predictive Analytics</h4>
+<p class="text-sm text-muted">Evapotranspiration (ET) based scheduling using daily meteorological forecasts.</p>
+</div>
+<div class="bg-background-light p-8 hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="cell_tower">cell_tower</span>
+<h4 class="font-display text-xl text-primary mb-2">Cellular Connectivity</h4>
+<p class="text-sm text-muted">Built-in 4G/LTE modules ensuring constant connection independent of local networks.</p>
+</div>
+<div class="bg-background-light p-8 hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="valve">valve</span>
+<h4 class="font-display text-xl text-primary mb-2">Multi-Station Control</h4>
+<p class="text-sm text-muted">Scalable from 12 to 200+ stations per hub, managing complex multi-zone landscapes.</p>
+</div>
+<div class="bg-background-light p-8 hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="security">security</span>
+<h4 class="font-display text-xl text-primary mb-2">Anomaly Detection</h4>
+<p class="text-sm text-muted">Instant alerts for high/low flow conditions, preventing catastrophic water loss.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-primary text-background-light py-16 px-8 border-t border-primary">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div>
+<span class="font-display font-semibold text-2xl uppercase tracking-widest mb-4 block">Simply Irrigation</span>
+<p class="text-surface/70 text-sm max-w-xs font-body">Nurturing the roots of tomorrow through technical precision and environmental stewardship.</p>
+</div>
+<div class="flex gap-16">
+<div class="flex flex-col gap-4">
+<span class="text-xs uppercase tracking-[2px] text-surface/50 font-medium">Solutions</span>
+<a class="text-sm hover:text-surface transition-colors" href="#">Drip Systems</a>
+<a class="text-sm hover:text-surface transition-colors" href="#">Smart Controllers</a>
+<a class="text-sm hover:text-surface transition-colors" href="#">Flow Management</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

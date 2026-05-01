@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consultation - Simply Irrigation LLC</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Work+Sans:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2C4027",
+                        "background-light": "#F4F1EB",
+                        "background-dark": "#1A1A1A",
+                        "surface": "#E9E4DA",
+                        "text-main": "#32302E",
+                        "muted": "#8C867B",
+                        "accent": "#1E3A40",
+                        "error": "#8A3B32"
+                    },
+                    fontFamily: {
+                        "heading": ["Playfair Display", "serif"],
+                        "body": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px"},
+                    spacing: {
+                        'sm': '16px',
+                        'md': '32px',
+                        'lg': '80px',
+                        'xl': '160px',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .editorial-input {
+            border: none;
+            border-bottom: 1px solid theme('colors.muted');
+            background: transparent;
+            border-radius: 0;
+            padding: 8px 0;
+            font-family: theme('fontFamily.heading');
+            font-size: 32px;
+            color: theme('colors.text-main');
+            transition: all 0.3s ease;
+            box-shadow: none !important;
+        }
+        
+        .editorial-input:focus {
+            outline: none;
+            border-bottom: 2px solid theme('colors.primary');
+        }
+        
+        .editorial-input::placeholder {
+            color: theme('colors.muted');
+            font-size: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .editorial-input:focus::placeholder {
+            opacity: 0.5;
+            transform: translateY(-4px);
+        }
+
+        .hairline-border {
+            border-color: theme('colors.muted');
+            border-width: 1px;
+        }
+        
+        /* Hide scrollbar for a cleaner look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-body antialiased min-h-screen">
+<div class="fixed top-0 left-0 w-full p-8 z-50 flex justify-between items-center pointer-events-none">
+<div class="flex items-center gap-4 text-primary pointer-events-auto">
+<a class="flex items-center justify-center p-2 rounded-full border border-primary/20 hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="arrow_back">arrow_back</span>
+</a>
+<h1 class="font-heading text-xl font-semibold tracking-wide">Simply Irrigation LLC</h1>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row min-h-screen">
+<!-- Left Side: Static Image -->
+<div class="lg:w-1/2 h-[409px] lg:h-screen relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Lush green agricultural fields at dawn with mist" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAg-Mumxm6GcX5wdw-9MbyZFtwwyQ5vcQqJoX1jmp69BTf-UrDNx1W2crlaJmgULVwl8JoFBJ7eNX_e0AAjBsY6kPCci_U_PJK9UQ4vaopItMrYzIqfvdHJzQrlcBi0nK862lWSCgXOW5F9n8hNmL-n7UVAkyx15jNrqlZWXDnqAlgbRcpi4SVNhf01NmRek7PQdTGVu_I-LoNmnv6ONTCHZJBJVN_RZmoEbBkC8Slo3ZhQey70wRh_a5xcOqpDh4L-EHHQpZDTq1sV');">
+</div>
+<div class="absolute inset-0 bg-black/10"></div>
+<div class="absolute bottom-12 left-12 max-w-md hidden lg:block">
+<p class="text-white/80 font-body text-sm tracking-widest uppercase mb-4">The Partnership</p>
+<h2 class="text-white font-heading text-4xl leading-tight">Cultivating long-term stewardship for your land.</h2>
+</div>
+</div>
+<!-- Right Side: Scrolling Form -->
+<div class="lg:w-1/2 h-screen overflow-y-auto no-scrollbar bg-background-light px-8 py-24 lg:px-24 xl:px-32">
+<div class="max-w-xl mx-auto flex flex-col justify-center min-h-full">
+<div class="mb-16">
+<p class="text-muted text-xs uppercase tracking-[2px] mb-4 flex items-center gap-4">
+                        Consultation <span class="w-10 h-[1px] bg-muted block"></span>
+</p>
+<h2 class="font-heading text-5xl lg:text-6xl text-primary mb-6">Request a Site Audit</h2>
+<p class="font-body text-text-main/80 leading-relaxed text-lg">
+                        Provide us with the details of your estate or commercial property. An expert engineer will review your inquiry within 24 hours.
+                    </p>
+</div>
+<!-- Progress Indicator -->
+<div class="grid grid-cols-[40px_1fr] gap-x-6 mb-16 relative">
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-2 pt-2">
+<div class="size-2 rounded-none bg-primary border border-primary"></div>
+<div class="w-[1px] bg-muted h-16 grow opacity-50"></div>
+</div>
+<div class="flex flex-1 flex-col pt-0 pb-8">
+<p class="text-primary font-body text-sm uppercase tracking-widest font-medium">01. Property</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-[1px] bg-muted h-4 opacity-50"></div>
+<div class="size-2 rounded-none bg-transparent border border-muted"></div>
+<div class="w-[1px] bg-muted h-16 grow opacity-50"></div>
+</div>
+<div class="flex flex-1 flex-col pt-0 pb-8">
+<p class="text-muted font-body text-sm uppercase tracking-widest">02. Needs</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-2 pb-2">
+<div class="w-[1px] bg-muted h-4 opacity-50"></div>
+<div class="size-2 rounded-none bg-transparent border border-muted"></div>
+</div>
+<div class="flex flex-1 flex-col pt-0 pb-8">
+<p class="text-muted font-body text-sm uppercase tracking-widest">03. Contact</p>
+</div>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-12" id="consultation-form">
+<div class="flex flex-col gap-2 relative group">
+<label class="sr-only" for="property-name">Property Name</label>
+<input class="editorial-input w-full form-input" id="property-name" placeholder="Property Name" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2 relative group">
+<label class="sr-only" for="acreage">Approximate Acreage</label>
+<input class="editorial-input w-full form-input" id="acreage" placeholder="Approximate Acreage" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2 relative group">
+<label class="sr-only" for="location">Location / Region</label>
+<input class="editorial-input w-full form-input" id="location" placeholder="Location / Region" required="" type="text"/>
+</div>
+<div class="mt-8">
+<button class="w-full lg:w-auto px-12 py-5 bg-primary text-background-light font-body text-sm uppercase tracking-[1px] font-medium hover:bg-accent transition-colors duration-300 flex items-center justify-center gap-4 group/btn" type="submit">
+                            Submit Inquiry
+                            <span class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="pt-8 border-t border-muted/30 mt-4">
+<p class="font-body text-sm text-muted italic">
+                            * By submitting this form, you agree to our privacy policy. Your information is kept strictly confidential.
+                        </p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</body></html>

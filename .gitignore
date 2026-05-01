@@ -1,0 +1,17 @@
+# Next.js
+site/.next/
+site/out/
+site/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env*.local
+
+# Logs
+*.log
+npm-debug.log*

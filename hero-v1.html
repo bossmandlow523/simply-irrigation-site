@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Simply Irrigation — Hero V1: Verdant Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --forest:    #1C3118;
+    --moss:      #2C4027;
+    --sage:      #5E7A58;
+    --cream:     #F5F0E8;
+    --parchment: #EDE6D8;
+    --sand:      #C9B99A;
+    --copper:    #8B6F47;
+    --ink:       #1A1A17;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--forest);
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* ── Nav ── */
+  nav {
+    position: fixed;
+    top: 38px; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 52px;
+    height: 72px;
+    background: var(--forest);
+    border-bottom: 1px solid rgba(245,240,232,0.08);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  /* Clean water-drop SVG mark */
+  .nav-logo-mark {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  .nav-logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cream);
+    line-height: 1;
+  }
+  .nav-logo-sub {
+    font-family: 'Jost', sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--sand);
+    line-height: 1;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.55);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--cream); }
+
+  .nav-cta {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--forest) !important;
+    background: var(--cream);
+    padding: 12px 28px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  .nav-cta:hover { background: var(--sand); }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+
+  /* Left panel — editorial text */
+  .hero-left {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 160px 64px 80px 52px;
+    background: var(--forest);
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 40px;
+    animation: fadeUp 1s ease-out 0.3s both;
+  }
+  .hero-eyebrow-line {
+    width: 40px;
+    height: 1px;
+    background: var(--sand);
+  }
+  .hero-eyebrow-text {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--sand);
+  }
+
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(64px, 7vw, 104px);
+    line-height: 0.95;
+    color: var(--cream);
+    margin-bottom: 48px;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--sand);
+  }
+
+  .headline-line {
+    display: block;
+    overflow: hidden;
+  }
+
+  .headline-inner {
+    display: block;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  .headline-inner.animate-1 { animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
+  .headline-inner.animate-2 { animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both; }
+  .headline-inner.animate-3 { animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.0s both; }
+
+  .hero-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(245,240,232,0.55);
+    max-width: 380px;
+    margin-bottom: 52px;
+    animation: fadeUp 1s ease-out 1.2s both;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    animation: fadeUp 1s ease-out 1.4s both;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--cream);
+    color: var(--forest);
+    padding: 18px 40px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, gap 0.3s;
+  }
+  .btn-primary:hover { background: var(--sand); gap: 22px; }
+
+  .btn-arrow {
+    width: 20px; height: 1px;
+    background: currentColor;
+    position: relative;
+    transition: width 0.3s;
+  }
+  .btn-arrow::after {
+    content: '';
+    position: absolute;
+    right: 0; top: -3px;
+    width: 7px; height: 7px;
+    border-right: 1px solid currentColor;
+    border-top: 1px solid currentColor;
+    transform: rotate(45deg);
+  }
+
+  .btn-ghost {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sand);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,185,154,0.3);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .btn-ghost:hover { color: var(--cream); border-color: var(--cream); }
+
+  /* Stats strip */
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(245,240,232,0.1);
+    animation: fadeUp 1s ease-out 1.6s both;
+  }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sand);
+  }
+
+  /* Right panel — photography */
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.15) contrast(1.08);
+    transform: scale(1.05);
+    animation: imgReveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+  }
+
+  .hero-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      var(--forest) 0%,
+      rgba(28,49,24,0.3) 35%,
+      rgba(28,49,24,0.05) 100%
+    );
+    z-index: 1;
+  }
+
+  /* Decorative vertical rule */
+  .hero-vr {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: -1px;
+    width: 1px;
+    background: rgba(245,240,232,0.12);
+    z-index: 5;
+    transform-origin: top;
+    animation: lineGrow 1.2s ease-out 0.4s both;
+  }
+
+  /* Floating badge */
+  .hero-badge {
+    position: absolute;
+    bottom: 64px;
+    right: 52px;
+    z-index: 10;
+    border: 1px solid rgba(245,240,232,0.25);
+    padding: 24px 32px;
+    background: rgba(28,49,24,0.7);
+    backdrop-filter: blur(12px);
+    animation: fadeUp 1s ease-out 1.8s both;
+  }
+  .hero-badge-label {
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--sand);
+    margin-bottom: 8px;
+  }
+  .hero-badge-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute;
+    bottom: 48px;
+    left: 52px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    animation: fadeUp 1s ease-out 2s both;
+  }
+  .scroll-hint-text {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.4);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  .scroll-hint-line {
+    width: 1px;
+    height: 48px;
+    background: rgba(245,240,232,0.2);
+    animation: scrollPulse 2.5s ease-in-out infinite 2.5s;
+  }
+
+  /* Grain overlay */
+  .grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+
+  /* ── Animations ── */
+  @keyframes slideUp {
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes imgReveal {
+    from { transform: scale(1.12); opacity: 0; }
+    to   { transform: scale(1.05); opacity: 1; }
+  }
+  @keyframes lineGrow {
+    from { transform: scaleY(0); }
+    to   { transform: scaleY(1); }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.2; transform: scaleY(1); }
+    50%       { opacity: 0.6; transform: scaleY(1.2); }
+  }
+
+  /* ── Label strip ── */
+  .preview-label {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(28,49,24,0.95);
+    border-bottom: 1px solid rgba(245,240,232,0.1);
+    padding: 10px 20px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sand);
+    text-align: center;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .preview-label strong { color: var(--cream); }
+  .preview-label a {
+    color: var(--sand);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<div class="preview-label">
+  <strong>Variation A</strong> — Verdant Editorial &nbsp;|&nbsp;
+  <a href="hero-v2.html">View Variation B →</a>
+</div>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <!-- Water drop mark — clean geometric SVG -->
+    <svg class="nav-logo-mark" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17 3C17 3 7 13.5 7 20.5C7 26.3 11.5 31 17 31C22.5 31 27 26.3 27 20.5C27 13.5 17 3Z"
+            fill="none" stroke="#C9B99A" stroke-width="1.2"/>
+      <path d="M17 8C17 8 10.5 15.5 10.5 20.5C10.5 24.1 13.4 27 17 27C20.6 27 23.5 24.1 23.5 20.5C23.5 15.5 17 8Z"
+            fill="#C9B99A" opacity="0.18"/>
+      <!-- Highlight glint -->
+      <circle cx="13.5" cy="19" r="1.5" fill="#C9B99A" opacity="0.45"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Simply Irrigation</span>
+      <span class="nav-logo-sub">Bradenton, Florida</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Solutions</a></li>
+    <li><a href="#">Sustainability</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#" class="nav-cta">Free Quote</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+
+  <!-- Left: Editorial text panel -->
+  <div class="hero-left">
+
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span class="hero-eyebrow-text">Bradenton, Florida · Est. 2018</span>
+    </div>
+
+    <h1 class="hero-headline">
+      <span class="headline-line">
+        <span class="headline-inner animate-1">Water</span>
+      </span>
+      <span class="headline-line">
+        <span class="headline-inner animate-2"><em>Moves.</em></span>
+      </span>
+      <span class="headline-line">
+        <span class="headline-inner animate-3">Growth</span>
+      </span>
+      <span class="headline-line">
+        <span class="headline-inner animate-3" style="animation-delay:1.15s">Follows.</span>
+      </span>
+    </h1>
+
+    <p class="hero-body">
+      Owner-operated irrigation services for homeowners and businesses across the Gulf Coast. Every system custom-designed, every installation backed by our personal guarantee.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#" class="btn-primary">
+        Request Site Audit
+        <span class="btn-arrow"></span>
+      </a>
+      <a href="#" class="btn-ghost">Our Services</a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Installs completed</div>
+      </div>
+      <div>
+        <div class="stat-number">15yr</div>
+        <div class="stat-label">Owner experience</div>
+      </div>
+      <div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Owner on every job</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Right: Photography panel -->
+  <div class="hero-right">
+    <div class="hero-vr"></div>
+
+    <!-- Swap src to actual image path when integrated -->
+    <img class="hero-img"
+         src="AdobeStock_166031167.jpeg"
+         alt="Lush irrigated lawn at sunrise"/>
+    <div class="hero-img-overlay"></div>
+
+    <!-- Floating trust badge -->
+    <div class="hero-badge">
+      <div class="hero-badge-label">Licensed &amp; Insured</div>
+      <div class="hero-badge-value">Gulf Coast<br/>Trusted</div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="scroll-hint">
+    <div class="scroll-hint-line"></div>
+    <span class="scroll-hint-text">Scroll</span>
+  </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find c:/simply -type d -name components -o -name app -o -name src ! -path */node_modules/*)"
+    ]
+  }
+}
