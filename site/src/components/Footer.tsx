@@ -44,11 +44,11 @@ export default function Footer() {
                 </span>
               </div>
 
-              <h3 className="font-heading text-5xl leading-[1.05] text-surface lg:text-6xl">
-                Simply
-                <br />
-                Irrigation
-              </h3>
+              <img
+                src="/images/logo.png"
+                alt="Simply Irrigation LLC"
+                style={{ height: '70px', width: 'auto' }}
+              />
 
               <p className="mt-8 max-w-xs font-body text-sm leading-[1.8] text-surface/50">
                 Professional irrigation services built on honesty, precision,
@@ -135,7 +135,7 @@ export default function Footer() {
               <div className="space-y-6">
                 <div className="space-y-1">
                   <p className="font-body text-sm text-surface/60">
-                    810 56th Ave E
+                    1003 57th Ave E
                   </p>
                   <p className="font-body text-sm text-surface/60">
                     Bradenton, FL 34203
