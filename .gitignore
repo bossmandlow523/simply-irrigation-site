@@ -1,7 +1,8 @@
 # Next.js
-site/.next/
-site/out/
-site/node_modules/
+.next/
+out/
+node_modules/
+*.tsbuildinfo
 
 # OS
 .DS_Store
@@ -11,6 +12,8 @@ Thumbs.db
 .env
 .env.local
 .env*.local
+.env.production.local
+.env.development.local
 
 # Logs
 *.log
